@@ -44,7 +44,7 @@ const MatchCard = ({ match, femaleImg, index }) => {
     const hue = getRandomValue(0, 360);
     const saturation = getRandomValue(40, 80);
     const lightness = getRandomValue(50, 70);
-  
+
     return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
   };
 
@@ -60,7 +60,7 @@ const MatchCard = ({ match, femaleImg, index }) => {
   return (
     <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal"
       style={{
-        width:"98%",
+        width: "98%",
         height: "100%",
         display: "flex",
         flexDirection: "column",
@@ -77,7 +77,7 @@ const MatchCard = ({ match, femaleImg, index }) => {
         style={{
           position: "relative",
           width: "98%",
-        
+
           height: "480px",
           backgroundColor: "#1F232F",
           marginBottom: "20px",
@@ -135,6 +135,7 @@ const MatchCard = ({ match, femaleImg, index }) => {
           justifyContent: "start",
           padding: "25px",
           overflowY: "scroll",
+          overflowWrap: "break-word",
         }}
       >
 
@@ -150,7 +151,7 @@ const MatchCard = ({ match, femaleImg, index }) => {
           gap: "10px",
         }}>
 
-          <p className="title"> Dimensiones de compatibilidad <br/> colaborativa </p>
+          <p className="title"> Dimensiones de compatibilidad <br /> colaborativa </p>
           <div style={{ width: "100%", height: "1px", backgroundColor: "white", marginBottom: "10px" }}></div>
 
           <div style={{
@@ -164,7 +165,7 @@ const MatchCard = ({ match, femaleImg, index }) => {
             <p className="label" style={{
               marginRight: "10px",
 
-            }}> Empesarial : </p>
+            }}> Empesarial: </p>
             <p className="subtitle"> {match['enterprise']} </p>
 
           </div>
@@ -176,7 +177,8 @@ const MatchCard = ({ match, femaleImg, index }) => {
             flexDirection: "row",
             alignItems: "center",
             justifyContent: "start",
-            gap: "10px",}}>
+            gap: "10px",
+          }}>
 
             <p className="label" style={{
 
@@ -192,7 +194,7 @@ const MatchCard = ({ match, femaleImg, index }) => {
             flexDirection: "row",
             alignItems: "center",
             justifyContent: "start",
-          
+
             gap: "10px",
           }}>
             <p className="label" style={{
@@ -209,7 +211,7 @@ const MatchCard = ({ match, femaleImg, index }) => {
             flexDirection: "row",
             alignItems: "center",
             justifyContent: "start",
-            
+
             gap: "10px",
           }}>
             <p className="label" style={{
@@ -227,11 +229,11 @@ const MatchCard = ({ match, femaleImg, index }) => {
             flexDirection: "row",
             alignItems: "center",
             justifyContent: "start",
-            
+
             gap: "10px",
           }
 
-}>
+          }>
             <p className="label" style={{
 
 
@@ -246,7 +248,7 @@ const MatchCard = ({ match, femaleImg, index }) => {
             flexDirection: "row",
             alignItems: "center",
             justifyContent: "start",
-          
+
             gap: "10px",
           }
 
@@ -254,7 +256,7 @@ const MatchCard = ({ match, femaleImg, index }) => {
             <p className="label" style={{
 
 
-            }}> Producto: </p>
+            }}> Producto:</p>
             <p className="subtitle"> {match['product']} </p>
 
           </div>
@@ -265,7 +267,7 @@ const MatchCard = ({ match, femaleImg, index }) => {
             flexDirection: "row",
             alignItems: "center",
             justifyContent: "start",
-          
+
             gap: "10px",
           }
 
@@ -280,12 +282,12 @@ const MatchCard = ({ match, femaleImg, index }) => {
             flexDirection: "row",
             alignItems: "center",
             justifyContent: "start",
-         
+
             gap: "10px",
           }
 
           }>
-            <p className="label"> Total Score:</p>
+            <p className="label">Total Score:</p>
             <p className="subtitle"> {match['total_score']} </p>
 
           </div>
@@ -342,35 +344,64 @@ const MatchCard = ({ match, femaleImg, index }) => {
             justifyContent: "center",
           }}>
 
-
             <p className="title"> Contacto </p>
             <div style={{ width: "100%", height: "1px", backgroundColor: "white", marginBottom: "10px" }}></div>
 
           </div>
-
-          <p className="label" style={{
-            marginRight: "10px",
-          }}> Email:</p>
-          <a
-      
-            href={`mailto:${match['Correo electrónico ']}`}
-            className="subtitle"> {match['Correo electrónico ']} </a>
-          <p className="label" style={{
-            marginRight: "10px",
-
-          }}> LinkedIn :</p>
-
-          <p
-
-
-            className="subtitle"> {match['Cual es tu LinkedIn']} </p>
 
 
 
           <div
             style={{
               width: "100%",
-              height: "100px",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "start",
+              justifyContent: "start",
+              gap: "10px",
+              overflowWrap: "break-word",
+              overflowY: "scroll",
+            }}
+  
+          >
+
+
+            <p className="label" style={{
+              marginRight: "10px",
+            }}> Email:</p>
+            <a
+
+              href={`mailto:${match['Correo electrónico ']}`}
+              className="subtitle"> {match['Correo electrónico ']} </a>
+            <p className="label" style={{
+              marginRight: "10px",
+
+            }}> LinkedIn :</p>
+
+
+              {
+                match['Cual es tu LinkedIn'].includes("linkedin.com/") ?
+                  <p
+                    className="subtitle"> {match['Cual es tu LinkedIn'].split("linkedin.com/")[1]} </p>
+                  :
+                  <p
+
+                    className="subtitle"> {match['Cual es tu LinkedIn']} </p>
+              }
+      
+          </div>
+
+
+
+
+
+
+
+
+          <div
+            style={{
+              width: "100%",
+
               display: "flex",
               flexDirection: "row",
               alignItems: "center",
@@ -405,7 +436,7 @@ const MatchCard = ({ match, femaleImg, index }) => {
                 flexDirection: "row",
                 alignItems: "center",
                 justifyContent: "start",
-                width: "60%",
+                width: "80%",
                 position: "absolute",
                 top: "25px",
                 left: "40px",
@@ -468,7 +499,7 @@ function MatchesView({ data, setData }) {
     const lightness = getRandomValue(50, 70);
 
     return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
-  
+
   };
 
   const handleCardClick = (index) => {
@@ -498,69 +529,69 @@ function MatchesView({ data, setData }) {
 
       <>
 
-        
-      <div
-        style={{
-          width: "100%",
-          height: "100px",
-          display: "flex",
-          flexDirection: "row",
-          alignItems: "center",
-          justifyContent: "center",
-          backgroundColor: "#1F232F",
-          padding: "10px",
-          position: "relative",
-          marginTop: "20px",
-          marginBottom: "20px",
-
-        }}>
 
         <div
-
           style={{
+            width: "100%",
+            height: "100px",
             display: "flex",
             flexDirection: "row",
             alignItems: "center",
             justifyContent: "center",
-            width: "20%",
-            position: "absolute",
-            left: "20px",
-            top: "20px",
-          }}
-        >
-          <img src={logo} style={{ height: "30px", borderRadius: "11px", marginRight: "10px" }} />
-        </div>
+            backgroundColor: "#1F232F",
+            padding: "10px",
+            position: "relative",
+            marginTop: "20px",
+            marginBottom: "20px",
 
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "start",
-            width: "70%",
-            position: "absolute",
-            left: "90px",
-            top: "25px",
           }}>
 
+          <div
 
-          <TypeAnimation
-            sequence={[
-              // Same substring at the start will only be typed out once, initially
-              'Hola soy Cirlce ! no pude encontrar resulatados para ese email :(',
-              1000, // wait 1s before replacing "Mice" with "Hamsters"
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "center",
+              width: "20%",
+              position: "absolute",
+              left: "20px",
+              top: "20px",
+            }}
+          >
+            <img src={logo} style={{ height: "30px", borderRadius: "11px", marginRight: "10px" }} />
+          </div>
+
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "start",
+              width: "70%",
+              position: "absolute",
+              left: "90px",
+              top: "25px",
+            }}>
 
 
-            ]}
-            wrapper="span"
-            speed={50}
-            style={{ fontSize: '1em', display: 'inline-block', color: "white", }}
-            repeat={Infinity}
-          />
+            <TypeAnimation
+              sequence={[
+                // Same substring at the start will only be typed out once, initially
+                'Hola soy Cirlce ! no pude encontrar resulatados para ese email :(',
+                1000, // wait 1s before replacing "Mice" with "Hamsters"
+
+
+              ]}
+              wrapper="span"
+              speed={50}
+              style={{ fontSize: '1em', display: 'inline-block', color: "white", }}
+              repeat={Infinity}
+            />
+          </div>
+
+
         </div>
-
-
-      </div>
 
 
       </>
@@ -663,7 +694,7 @@ function MatchesView({ data, setData }) {
       {data ?
         <>
           {data.map((match, index) => (
-              <MatchCard  match={match} femaleImg={getImg(match)} index={0} />
+            <MatchCard match={match} femaleImg={getImg(match)} index={0} />
 
           ))}
         </>
