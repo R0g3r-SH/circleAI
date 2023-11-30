@@ -58,23 +58,27 @@ const MatchCard = ({ match, femaleImg, index }) => {
   };
 
   return (
-    <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal"
+    < div
       style={{
-        width: "98%",
+        width: "100%",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
         padding: "10px",
-
+        boxSizing: "border-box",
+        overflowY: "scroll",
+        borderBlockColor: "white",
       }}
 
-    >
 
+    >
       <div onClick={handleCardClick}
+
         style={{
           position: "relative",
           width: "98%",
+
           height: "480px",
           backgroundColor: "#1F232F",
           marginBottom: "20px",
@@ -114,22 +118,25 @@ const MatchCard = ({ match, femaleImg, index }) => {
 
 
       <div
-        onClick={handleCardClick}
         className="iosscroll"
+        onClick={handleCardClick}
+
         style={{
           width: "98% !important",
           maxWidth: "98% !important",
-          minHeight: "480px",
-      
+          minHeight: "1800px",
           backgroundColor: "#1F232F",
           marginBottom: "20px",
           borderRadius: "20px",
+          padding: "0",
           boxSizing: "border-box",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "start",
           padding: "25px",
+          overflowY: "scroll",
+          overflowWrap: "break-word",
         }}
       >
 
@@ -356,7 +363,7 @@ const MatchCard = ({ match, femaleImg, index }) => {
               overflowWrap: "break-word",
               overflowY: "scroll",
             }}
-  
+
           >
 
 
@@ -373,16 +380,16 @@ const MatchCard = ({ match, femaleImg, index }) => {
             }}> LinkedIn :</p>
 
 
-              {
-                match['Cual es tu LinkedIn'].includes("linkedin.com/") ?
-                  <p
-                    className="subtitle"> {match['Cual es tu LinkedIn'].split("linkedin.com/")[1]} </p>
-                  :
-                  <p
+            {
+              match['Cual es tu LinkedIn'].includes("linkedin.com/") ?
+                <p
+                  className="subtitle"> {match['Cual es tu LinkedIn'].split("linkedin.com/")[1]} </p>
+                :
+                <p
 
-                    className="subtitle"> {match['Cual es tu LinkedIn']} </p>
-              }
-      
+                  className="subtitle"> {match['Cual es tu LinkedIn']} </p>
+            }
+
           </div>
 
 
@@ -455,10 +462,8 @@ const MatchCard = ({ match, femaleImg, index }) => {
 
       </div>
 
+    </div>
 
-
-
-    </ReactCardFlip>
   );
 };
 
@@ -688,25 +693,7 @@ function MatchesView({ data, setData }) {
       {data ?
         <>
           {data.map((match, index) => (
-
-            <div 
-
-            className="iosscroll"
-            style={{
-              width: "100%",
-              maxHeight: "480px",
-              height: "480px",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: "10px",
-      
-            }} >
-
             <MatchCard match={match} femaleImg={getImg(match)} index={0} />
-            </div>
-      
 
           ))}
         </>

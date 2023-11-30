@@ -43,6 +43,7 @@
 
 .iosscroll {
     overflow-y: scroll !important;
+    overflow-x: hidden !important;
     -webkit-overflow-scrolling: touch !important;
     transform: translate3d(0, 0, 0) !important;
     z-index: 9999 !important;
