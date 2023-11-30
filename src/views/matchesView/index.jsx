@@ -123,7 +123,6 @@ const MatchCard = ({ match, femaleImg, index }) => {
           width: "98% !important",
           maxWidth: "98% !important",
           minHeight: "480px",
-          maxHeight: "480px",
           backgroundColor: "#1F232F",
           marginBottom: "20px",
           borderRadius: "20px",
