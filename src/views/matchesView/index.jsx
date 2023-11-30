@@ -690,6 +690,8 @@ function MatchesView({ data, setData }) {
           {data.map((match, index) => (
 
             <div 
+
+            className="iosscroll"
             style={{
               width: "100%",
               maxHeight: "480px",
