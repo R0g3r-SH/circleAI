@@ -61,12 +61,12 @@ const MatchCard = ({ match, femaleImg, index }) => {
     <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal"
       style={{
         width: "98%",
-        height: "100%",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
         padding: "10px",
+        boxSizing: "border-box",
 
       }}
 
@@ -127,15 +127,12 @@ const MatchCard = ({ match, femaleImg, index }) => {
           backgroundColor: "#1F232F",
           marginBottom: "20px",
           borderRadius: "20px",
-       
           boxSizing: "border-box",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "start",
           padding: "25px",
-          overflowY: "scroll",
-          overflowWrap: "break-word",
         }}
       >
 
