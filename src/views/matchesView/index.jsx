@@ -405,7 +405,7 @@ const MatchCard = ({ match, femaleImg, index }) => {
                 flexDirection: "row",
                 alignItems: "center",
                 justifyContent: "start",
-                width: "80%",
+                width: "60%",
                 position: "absolute",
                 top: "25px",
                 left: "40px",
