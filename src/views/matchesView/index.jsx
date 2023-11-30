@@ -61,7 +61,8 @@ const MatchCard = ({ match, femaleImg, index }) => {
     <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal"
       style={{
         width: "98%",
-     
+        maxHeight: "480px",
+        height: "480px",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
