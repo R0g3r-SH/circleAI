@@ -69,6 +69,7 @@ const MatchCard = ({ match, femaleImg, index }) => {
         boxSizing: "border-box",
         overflowY: "scroll",
         borderBlockColor: "white",
+        overflowX: "hidden",
       }}
 
 
