@@ -118,7 +118,7 @@ const MatchCard = ({ match, femaleImg, index }) => {
 
       <div
         onClick={handleCardClick}
-
+        className="iosscroll"
         style={{
           width: "98% !important",
           maxWidth: "98% !important",
@@ -127,7 +127,7 @@ const MatchCard = ({ match, femaleImg, index }) => {
           backgroundColor: "#1F232F",
           marginBottom: "20px",
           borderRadius: "20px",
-          padding: "0",
+       
           boxSizing: "border-box",
           display: "flex",
           flexDirection: "column",
@@ -183,7 +183,7 @@ const MatchCard = ({ match, femaleImg, index }) => {
             <p className="label" style={{
 
 
-            }}> Geografica : </p>
+            }}>Geografica:</p>
             <p className="subtitle"> {match['geography']} </p>
 
           </div>
