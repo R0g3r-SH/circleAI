@@ -168,7 +168,7 @@ const MatchCard = ({ match, femaleImg, index }) => {
               marginRight: "10px",
 
             }}> Empesarial: </p>
-            <p className="subtitle"> {match['enterprise']} </p>
+            <p className="subtitle"> {match['enterprise']} %</p>
 
           </div>
 
@@ -186,7 +186,7 @@ const MatchCard = ({ match, femaleImg, index }) => {
 
 
             }}>Geografica:</p>
-            <p className="subtitle"> {match['geography']} </p>
+            <p className="subtitle"> {match['geography']} % </p>
 
           </div>
 
@@ -203,7 +203,7 @@ const MatchCard = ({ match, femaleImg, index }) => {
 
 
             }}> Hobby : </p>
-            <p className="subtitle"> {match['hobby']} </p>
+            <p className="subtitle"> {match['hobby']} %</p>
 
           </div>
 
@@ -220,7 +220,7 @@ const MatchCard = ({ match, femaleImg, index }) => {
 
 
             }}> Mercado : </p>
-            <p className="subtitle"> {match['market']} </p>
+            <p className="subtitle"> {match['market']} %</p>
 
           </div>
 
@@ -240,7 +240,7 @@ const MatchCard = ({ match, femaleImg, index }) => {
 
 
             }}> Persona : </p>
-            <p className="subtitle"> {match['person']} </p>
+            <p className="subtitle"> {match['person']} %</p>
 
           </div>
 
@@ -259,7 +259,7 @@ const MatchCard = ({ match, femaleImg, index }) => {
 
 
             }}> Producto:</p>
-            <p className="subtitle"> {match['product']} </p>
+            <p className="subtitle"> {match['product']} % </p>
 
           </div>
 
@@ -275,7 +275,7 @@ const MatchCard = ({ match, femaleImg, index }) => {
 
           }>
             <p className="label"> Thinking:</p>
-            <p className="subtitle"> {match['product']} </p>
+            <p className="subtitle"> {match['product']} %</p>
 
           </div>
           <div style={{
@@ -290,7 +290,7 @@ const MatchCard = ({ match, femaleImg, index }) => {
 
           }>
             <p className="label">Total Score:</p>
-            <p className="subtitle"> {match['total_score']} </p>
+            <p className="subtitle"> {match['total_score']} %</p>
 
           </div>
 
