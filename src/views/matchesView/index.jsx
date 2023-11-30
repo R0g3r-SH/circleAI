@@ -150,7 +150,7 @@ const MatchCard = ({ match, femaleImg, index }) => {
           gap: "10px",
         }}>
 
-          <p className="title"> Dimensiones de compatibilidad colaborativa </p>
+          <p className="title"> Dimensiones de compatibilidad <br/> colaborativa </p>
           <div style={{ width: "100%", height: "1px", backgroundColor: "white", marginBottom: "10px" }}></div>
 
           <div style={{
