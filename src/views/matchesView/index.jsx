@@ -120,7 +120,8 @@ const MatchCard = ({ match, femaleImg, index }) => {
         onClick={handleCardClick}
 
         style={{
-          maxWidth: "100%",
+          width: "98% !important",
+          maxWidth: "98% !important",
           minHeight: "480px",
           maxHeight: "480px",
           backgroundColor: "#1F232F",
