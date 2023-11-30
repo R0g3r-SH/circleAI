@@ -61,8 +61,6 @@ const MatchCard = ({ match, femaleImg, index }) => {
     <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal"
       style={{
         width: "98%",
-        maxHeight: "480px",
-        height: "480px",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -74,11 +72,9 @@ const MatchCard = ({ match, femaleImg, index }) => {
     >
 
       <div onClick={handleCardClick}
-
         style={{
           position: "relative",
           width: "98%",
-
           height: "480px",
           backgroundColor: "#1F232F",
           marginBottom: "20px",
@@ -124,7 +120,7 @@ const MatchCard = ({ match, femaleImg, index }) => {
           width: "98% !important",
           maxWidth: "98% !important",
           minHeight: "480px",
-          maxHeight: "480px",
+      
           backgroundColor: "#1F232F",
           marginBottom: "20px",
           borderRadius: "20px",
@@ -692,7 +688,23 @@ function MatchesView({ data, setData }) {
       {data ?
         <>
           {data.map((match, index) => (
+
+            <div 
+            style={{
+              width: "100%",
+              maxHeight: "480px",
+              height: "480px",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              padding: "10px",
+      
+            }} >
+
             <MatchCard match={match} femaleImg={getImg(match)} index={0} />
+            </div>
+      
 
           ))}
         </>
