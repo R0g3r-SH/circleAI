@@ -60,14 +60,14 @@ const MatchCard = ({ match, femaleImg, index }) => {
   return (
     <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal"
       style={{
-        width: "100%",
+        width:"98%",
         height: "100%",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
         padding: "10px",
-        boxSizing: "border-box",
+
       }}
 
     >
@@ -120,7 +120,7 @@ const MatchCard = ({ match, femaleImg, index }) => {
         onClick={handleCardClick}
 
         style={{
-          maxWidth: "calc(100% - 50px)",
+          maxWidth: "100%",
           minHeight: "480px",
           maxHeight: "480px",
           backgroundColor: "#1F232F",
@@ -137,10 +137,8 @@ const MatchCard = ({ match, femaleImg, index }) => {
         }}
       >
 
-
         <p className="title"> {match['Indica tu nombre completo']} </p>
         <p className="subtitle"> {match['Nombre de la empresa o negocio']} </p>
-
 
         <div style={{
           width: "100%",
@@ -148,11 +146,8 @@ const MatchCard = ({ match, femaleImg, index }) => {
           flexDirection: "column",
           alignItems: "start",
           justifyContent: "start",
-          zIndex: "99999",
           gap: "10px",
-        }
-
-        }>
+        }}>
 
           <p className="title"> Dimensiones de compatibilidad colaborativa </p>
           <div style={{ width: "100%", height: "1px", backgroundColor: "white", marginBottom: "10px" }}></div>
@@ -163,11 +158,8 @@ const MatchCard = ({ match, femaleImg, index }) => {
             flexDirection: "row",
             alignItems: "center",
             justifyContent: "start",
-            zIndex: "99999",
             gap: "10px",
-          }
-
-          }>
+          }}>
             <p className="label" style={{
               marginRight: "10px",
 
@@ -183,11 +175,8 @@ const MatchCard = ({ match, femaleImg, index }) => {
             flexDirection: "row",
             alignItems: "center",
             justifyContent: "start",
-            zIndex: "99999",
-            gap: "10px",
-          }
+            gap: "10px",}}>
 
-          }>
             <p className="label" style={{
 
 
@@ -195,17 +184,16 @@ const MatchCard = ({ match, femaleImg, index }) => {
             <p className="subtitle"> {match['geography']} </p>
 
           </div>
+
           <div style={{
             width: "100%",
             display: "flex",
             flexDirection: "row",
             alignItems: "center",
             justifyContent: "start",
-            zIndex: "99999",
+          
             gap: "10px",
-          }
-
-          }>
+          }}>
             <p className="label" style={{
 
 
@@ -220,11 +208,9 @@ const MatchCard = ({ match, femaleImg, index }) => {
             flexDirection: "row",
             alignItems: "center",
             justifyContent: "start",
-            zIndex: "99999",
+            
             gap: "10px",
-          }
-
-          }>
+          }}>
             <p className="label" style={{
 
 
@@ -240,11 +226,11 @@ const MatchCard = ({ match, femaleImg, index }) => {
             flexDirection: "row",
             alignItems: "center",
             justifyContent: "start",
-            zIndex: "99999",
+            
             gap: "10px",
           }
 
-          }>
+}>
             <p className="label" style={{
 
 
@@ -259,7 +245,7 @@ const MatchCard = ({ match, femaleImg, index }) => {
             flexDirection: "row",
             alignItems: "center",
             justifyContent: "start",
-            zIndex: "99999",
+          
             gap: "10px",
           }
 
@@ -278,7 +264,7 @@ const MatchCard = ({ match, femaleImg, index }) => {
             flexDirection: "row",
             alignItems: "center",
             justifyContent: "start",
-            zIndex: "99999",
+          
             gap: "10px",
           }
 
@@ -293,7 +279,7 @@ const MatchCard = ({ match, femaleImg, index }) => {
             flexDirection: "row",
             alignItems: "center",
             justifyContent: "start",
-            zIndex: "99999",
+         
             gap: "10px",
           }
 
@@ -345,14 +331,7 @@ const MatchCard = ({ match, femaleImg, index }) => {
 
 
           <p
-            style={{ zIndex: "99999", }}
-
-
             className="subtitle"> {match['Cuales son los 3 libros que recomendarías a alguien leer ']} </p>
-
-
-
-
 
           <div style={{
             width: "100%",
@@ -372,7 +351,7 @@ const MatchCard = ({ match, femaleImg, index }) => {
             marginRight: "10px",
           }}> Email:</p>
           <a
-            style={{ zIndex: "99999", }}
+      
             href={`mailto:${match['Correo electrónico ']}`}
             className="subtitle"> {match['Correo electrónico ']} </a>
           <p className="label" style={{
@@ -381,7 +360,6 @@ const MatchCard = ({ match, femaleImg, index }) => {
           }}> LinkedIn :</p>
 
           <p
-            style={{ zIndex: "99999", }}
 
 
             className="subtitle"> {match['Cual es tu LinkedIn']} </p>
@@ -447,9 +425,6 @@ const MatchCard = ({ match, femaleImg, index }) => {
 
 
         </div>
-
-
-
 
 
       </div>
